@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-label="Agent preset switcher">
+  <rect x="10" y="10" width="44" height="44" rx="12" fill="none" stroke="#247bbf" stroke-width="4"/>
+  <path d="M22 26h16" fill="none" stroke="#247bbf" stroke-width="4" stroke-linecap="round"/>
+  <path d="M34 20l8 6-8 6" fill="none" stroke="#247bbf" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M42 38H26" fill="none" stroke="#247bbf" stroke-width="4" stroke-linecap="round"/>
+  <path d="M30 32l-8 6 8 6" fill="none" stroke="#247bbf" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

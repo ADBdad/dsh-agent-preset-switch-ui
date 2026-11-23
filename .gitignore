@@ -1,0 +1,6 @@
+node_modules/
+*.log
+.DS_Store
+*.png.bak
+# Local proof screenshot contains real chat content — never publish.
+header-dropdown-proof.png

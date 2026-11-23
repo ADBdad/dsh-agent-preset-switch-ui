@@ -1,0 +1,6 @@
+- insert:
+    - id: dsh-agent-preset-switch-ui
+      name: '@dsh-external/dsh-agent-preset-switch-ui'
+      config:
+        enabled: true
+        syncDefault: true

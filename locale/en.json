@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Agent preset switcher",
+    "description": "Turns the session header's agent-preset label into a dropdown that switches the running session's preset in place."
+  }
+}
