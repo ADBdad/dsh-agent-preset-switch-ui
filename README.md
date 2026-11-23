@@ -34,8 +34,8 @@ loopback callers (loopback `Host` header; loopback `Origin` when present).
    choice in the session log, which is the truth source every other surface
    reads. Recording is best-effort: a failure is reported in `recordError`.
 3. `settings.update("agent-preset-registry", { selectedDefault })` — makes new
-   sessions start with the same preset (CAS on the namespace revision). Disable
-   this with `syncDefault: false`.
+   sessions start with the same preset (CAS on the namespace revision). Off by
+   default; enable it with `syncDefault: true`.
 
 ### Semantics
 
@@ -46,8 +46,8 @@ were made under the previous composition and are not replayed.
 
 | Key | Default | Meaning |
 | --- | --- | --- |
-| `enabled` | `true` | When `false`, `POST /switch` answers `403 preset switching is disabled`. |
-| `syncDefault` | `true` | Also write `selectedDefault` so new sessions use the preset. |
+| `enabled` | `true` | When `false`, the header control is disabled and `POST /switch` answers `403 preset switching is disabled`. |
+| `syncDefault` | `false` | Also write `selectedDefault` so new sessions use the preset. |
 
 Both are volatile config fields. They can be edited at runtime with the config
 editor (`ctx.get("configEditor").edit(ctx.fiber.entry, …)`) and take effect

@@ -3,4 +3,4 @@
       name: '@dsh-external/dsh-agent-preset-switch-ui'
       config:
         enabled: true
-        syncDefault: true
+        syncDefault: false

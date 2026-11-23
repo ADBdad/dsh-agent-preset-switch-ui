@@ -26,6 +26,9 @@ ok(/Date\.now\(\)\s*-\s*rosterCache\.at\s*</.test(src), 'roster TTL consulted')
 // bug 5: a session without a preset must still render a control.
 ok(!/if\s*\(!sessionId\s*\|\|\s*!presetId\)\s*return null/.test(src), 'no early null when preset missing')
 ok(/"menu\.pick"/.test(src), 'pick-a-preset label present in both dictionaries')
+ok(/rosterCache\.enabled/.test(src), 'roster cache tracks enabled')
+ok(/disabled:\s*!enabled/.test(src), 'button disabled when switching off')
+ok(/"menu\.disabled"/.test(src), 'disabled label present in both dictionaries')
 // Keep the portaled fixed overlay and priority shadowing intact.
 ok(/priority:\s*-1/.test(src), 'shadowing priority kept')
 ok(/createPortal\(menuNode,\s*document\.body\)/.test(src), 'menu portaled to body')

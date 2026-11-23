@@ -18,7 +18,7 @@ console.log('index.js:')
 // bug 8: Config fields must be volatile, and the legacy settings namespace
 // registration (which throws on hot reload) must be gone.
 ok(/\benabled:\s*z\.boolean\(\)\.default\(true\)\.volatile\(\)/.test(src), 'config.enabled is volatile')
-ok(/syncDefault:\s*z\.boolean\(\)\.default\(true\)\.volatile\(\)/.test(src), 'config.syncDefault is volatile')
+ok(/syncDefault:\s*z\.boolean\(\)\.default\(false\)\.volatile\(\)/.test(src), 'config.syncDefault defaults false & volatile')
 ok(!/settings\.register\s*\(/.test(src), 'no legacy settings.register')
 ok(/typeof value\.get === "function"/.test(src) || /typeof value\.get === 'function'/.test(src), 'live volatile reads via .get()')
 ok(/enabledNow\(\)/.test(src) && /syncDefaultNow\(\)/.test(src), 'volatile values read at use sites')
@@ -28,5 +28,7 @@ ok(/agent-preset\/selected/.test(src), 'switch records agent-preset/selected')
 ok(/guardLocal\(req\)/.test(src), 'loopback guard present')
 ok(/kind:\s*"prefix"/.test(src), 'HTTP api registered as prefix route')
 ok(/AGENT_PRESET_NS\s*=\s*"agent-preset-registry"/.test(src), 'writes registry selectedDefault namespace')
+ok(/enabled:\s*enabledNow\(\)/.test(src), 'list body exposes enabled')
+ok(/readVolatile\(config\?\.syncDefault,\s*false\)/.test(src), 'syncDefault fallback false')
 
 console.log(`config.mjs: ${checks} checks passed`)

@@ -2,6 +2,15 @@
 
 All notable changes to this project are documented in this file.
 
+## [Unreleased]
+
+### Changed
+
+- `syncDefault` now defaults to `false`: switching a preset no longer changes
+  the global default unless you opt in with `syncDefault: true`.
+- The header control is disabled and greyed out when `enabled` is `false`,
+  instead of failing only after a click.
+
 ## [1.0.0] - 2026-11-23
 
 ### Added
