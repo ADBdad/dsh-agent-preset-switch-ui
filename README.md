@@ -4,9 +4,9 @@
 
 Turns the session header's **agent preset** label into a clickable dropdown. Picking a preset rebinds the live session's composition right away — the agent runs the new preset from the next call onwards.
 
-这个插件**自带切换引擎**（Host 半），不依赖任何其它预设切换插件。装它的时候请把旧的 `dsh-preset-switch` 禁用掉，避免两个插件抢同一个标题栏插槽。
+这个插件**自带切换引擎**（Host 半），不依赖任何其它预设切换插件。
 
-The bundle is **self-contained**: it ships its own switch engine (Host half) and does not depend on any other preset-switching plugin. Disable the old `dsh-preset-switch` bundle when using this one, so both don't claim the same header slot.
+The bundle is **self-contained**: it ships its own switch engine (Host half) and does not depend on any other preset-switching plugin.
 
 ## 它做什么 / What it does
 
@@ -59,9 +59,9 @@ Both are volatile config fields. They can be edited at runtime with the config e
 dsh plugin install github:ADBdad/dsh-agent-preset-switch-ui
 ```
 
-然后在 profile 里选中/启用这个 bundle。如果旧的 `dsh-preset-switch` 还在启用，请禁用它，否则同一个标题栏插槽会出现两个下拉菜单。
+然后在 profile 里选中/启用这个 bundle。
 
-Then make sure the bundle is selected/enabled in the profile. If an older `dsh-preset-switch` bundle is enabled, disable it to avoid two dropdowns on the same header slot.
+Then make sure the bundle is selected/enabled in the profile.
 
 ## 运行环境 / Requirements
 
